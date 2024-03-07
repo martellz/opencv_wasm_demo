@@ -90,7 +90,6 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
       -msimd128 \
       -O3 \
       -Oz \
-      --extern-post-js ../../system.js \
       --no-entry \
       --no-check-features \
       --profiling-funcs \
@@ -117,7 +116,6 @@ else ()
       -msimd128 \
       -O3 \
       -Oz \
-      --extern-post-js ../../system.js \
       --no-entry \
       --no-check-features \
       --bind")

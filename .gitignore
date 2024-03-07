@@ -1,4 +1,9 @@
 *.jpg
 *.png
 
-src/libs/opencv*/
+.vscode/
+src/libs/opencv
+src/libs/build
+src/demo/build
+dist/
+examples/public/assets/
