@@ -41,7 +41,7 @@ include_directories(${LIBS_BUILD_FOLDER}/../opencv/modules/imgcodecs/include/)
 include_directories(${LIBS_BUILD_FOLDER}/../opencv/modules/imgproc/include/)
 include_directories(${LIBS_BUILD_FOLDER}/../opencv/modules/objdetect/include/)
 include_directories(${LIBS_BUILD_FOLDER}/../opencv/modules/video/include/)
-include_directories(${LIBS_BUILD_FOLDER}/opencv/)
+include_directories(${LIBS_BUILD_FOLDER}/opencv/)  # this is libs/opencv/build actually
 
 # Add the project source files
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
@@ -93,7 +93,7 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
       --no-entry \
       --no-check-features \
       --profiling-funcs \
-      --bind")
+      -lembind")
 else ()
     message(STATUS "Compile in RELEASE mode")
     set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "\
@@ -118,7 +118,7 @@ else ()
       -Oz \
       --no-entry \
       --no-check-features \
-      --bind")
+      -lembind")
 endif ()
 unset(CMAKE_BUILD_TYPE CACHE)
 
